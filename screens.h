@@ -17,7 +17,7 @@ int menu()
     printf(NEWLINE);
     printf("4) Manage class");
     printf(NEWLINE);
-    printf("6) Undecided");
+    printf("5) Undecided");
     printf(NEWLINE);
 
     flushBuffer();// flush out the buffer so it wont overflow fresh values
@@ -225,7 +225,7 @@ void mngClass()
     printf(NEWLINE);
     printf(NEWLINE);
 
-    printf("1) Add Student to a class.");
+    printf("1) Add Students to a class.");
     printf(NEWLINE);
 
     printf("2) Remove Student from a class.");
@@ -235,7 +235,7 @@ void mngClass()
     scanf("%d",&option);
 
     if (option == 1)
-        addStudent(); // subscreen
+        addStudents_Abstract(); // subscreen
     else if(option == 2)
         removeStudent(); // subscreen
     else

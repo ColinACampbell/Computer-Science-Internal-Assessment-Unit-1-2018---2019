@@ -20,10 +20,6 @@ void createClass(char cName[60], char tName[40],char tPass[40])
 {
     FILE *ptr;
 
-    /**strcat(location,cName); // concatenate the string path to the file name
-    strcat(location,".txt");
-    strcpy(path,location);**/
-
     char *fileExtension = ".txt";
 
     strcat(cName,fileExtension);
@@ -33,7 +29,7 @@ void createClass(char cName[60], char tName[40],char tPass[40])
     if (ptr)
     {
         fprintf(ptr,"%s\t%s\n",tName,tPass); // put the user name and password at top of the file
-        addStudents(ptr);
+        //addStudents(ptr);
         printf("\nClass Created successfully");
         fclose(ptr);
     } else
@@ -109,7 +105,9 @@ void addStudents(FILE *fp)
     }
 }
 
-void addStudent()
+// difference between addStudents and addStudents_Abstract is that the latter does not takes in
+// a pointer to a file, it already asks for one
+void addStudents_Abstract()
 {
     char tUsername[40];
     char tPass[40];
@@ -136,30 +134,41 @@ void addStudent()
 
     if (isLogged)
     {
-        struct Student student;
-        printf("\nPlease enter student full name : ");
-        flushBuffer();
-        gets(student.fullName);
+        printf("Please enter the amount of students you would like to add.");
+        int numStud = 0; // number students
+        fflush(stdin);
+        scanf("%d",&numStud);
 
-        printf("Please enter student Mathematics average grade : ");
-        flushBuffer();
-        scanf("%d",&student.mathGrade);
+        struct Student students[numStud];
 
-        printf("Please enter student English average grade : ");
-        flushBuffer();
-        scanf("%d",&student.engGrade);
+        for (int i = 0; i < numStud; i++)
+        {
+            int a = i + 1;
+            printf("\nPlease enter student %d full name : ",a);
+            flushBuffer();
+            gets(students[i].fullName);
 
-        printf("Please enter student Physical Education average grade : ");
-        flushBuffer();
-        scanf("%d",&student.phyEdGrade);
+            printf("Please enter student Mathematics average grade : ");
+            flushBuffer();
+            scanf("%d",&students[i].mathGrade);
 
-        printf("Please enter student Integrated Science average grade : ");
-        flushBuffer();
-        scanf("%d",&student.inteSciGrade);
-        fprintf(fp,"%s\t%d\t%d\t%d\t%d\n",student.fullName,student.mathGrade,student.engGrade,student.phyEdGrade,student.inteSciGrade);
+            printf("Please enter student English average grade : ");
+            flushBuffer();
+            scanf("%d",&students[i].engGrade);
+
+            printf("Please enter student Physical Education average grade : ");
+            flushBuffer();
+            scanf("%d",&students[i].phyEdGrade);
+
+            printf("Please enter student Integrated Science average grade : ");
+            flushBuffer();
+            scanf("%d",&students[i].inteSciGrade);
+            fprintf(fp,"%s\t%d\t%d\t%d\t%d\n",students[i].fullName,students[i].mathGrade,students[i].engGrade,students[i].phyEdGrade,students[i].inteSciGrade);
+            printf("Student added successfully\n");
+        }
         fclose(fp);
 
-        printf("Student added successfully\n");
+
     }
 }
 

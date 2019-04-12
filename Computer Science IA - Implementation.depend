@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1553299881 source:c:\users\christine\desktop\school material\internal assestments\computer science\computer science ia - implementation\computer science ia - implementation\main.c
+1555028278 source:c:\users\christine\desktop\school material\internal assestments\computer science\computer science ia - implementation\computer science ia - implementation\main.c
 	<stdio.h>
 	<stdlib.h>
 	"screens.h"
 
-1553302816 c:\users\christine\desktop\school material\internal assestments\computer science\computer science ia - implementation\computer science ia - implementation\screens.h
+1555028969 c:\users\christine\desktop\school material\internal assestments\computer science\computer science ia - implementation\computer science ia - implementation\screens.h
 	"utils.h"
 
-1553297586 c:\users\christine\desktop\school material\internal assestments\computer science\computer science ia - implementation\computer science ia - implementation\utils.h
+1555028948 c:\users\christine\desktop\school material\internal assestments\computer science\computer science ia - implementation\computer science ia - implementation\utils.h
 	<string.h>
 	<stdbool.h>
 	"models.h"
