@@ -1,0 +1,13 @@
+Changes made - v 1.0.1
+------------
+Method Added 
+  addStudents_Abstract() - utils.h
+  Used in mngClass() - screens.h
+
+Methods changed
+  createClass - utils.h, @ line 22
+  removed addStudents(FILE *fp) method
+  menu() - changed "6) undecided" to "5) undecided", line 20
+
+Lines Changed
+  main.c - @ line 31, changed "case 6:break" to "case 5: break"

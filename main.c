@@ -12,6 +12,8 @@ int main()
     int exit = 0; // sentinel value for the while loop
     int option = 0; // value returned to from menu
 
+    printf("---------- Oakland Group of Schools Information System ----------\n\n");
+
     while ( exit == 0)
     {
         char decision = 0;
@@ -26,11 +28,11 @@ int main()
             break;
             case 4 : mngClass();
             break;
-            case 6 : break;
+            case 5: break;
         }
 
         printf("\nWould you like to terminate the program ? y/n ");
-        fflush(stdin);
+        fflush(stdin); // flush the buffer so it can store other values
         scanf("%c",&decision);
 
         if ( decision == 'y')
